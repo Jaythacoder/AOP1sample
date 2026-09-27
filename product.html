@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Lora', serif; background-color: #000; color: #e2e2e5; margin: 0; overflow-x: hidden; }
+        body { font-family: 'Lora', serif; background-color: #0a0f0b; color: #e2e2e5; margin: 0; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .bg-apothecary { background-color: #4a5d4e; }
         .text-apothecary { color: #a3b18a; }
@@ -54,9 +54,9 @@
 </head>
 <body class="bg-black">
     <div class="bg-slideshow">
-        <div class="slide active" style="background-image: url('../budding-Bu6BSErSL_M-unsplash.jpg')"></div>
-        <div class="slide" style="background-image: url('../budding-h3PWUqxpP_0-unsplash.jpg')"></div>
-        <div class="slide" style="background-image: url('../roberto-valdivia-HrRm_V-V0sM-unsplash.jpg')"></div>
+        <div class="slide active" style="background-image: url('../images/budding-Bu6BSErSL_M-unsplash.jpg')"></div>
+        <div class="slide" style="background-image: url('../images/budding-h3PWUqxpP_0-unsplash.jpg')"></div>
+        <div class="slide" style="background-image: url('../images/roberto-valdivia-HrRm_V-V0sM-unsplash.jpg')"></div>
     </div>
     <div class="color-overlay"></div>
 
@@ -69,7 +69,6 @@
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 py-12 relative z-10">
-        <!-- Warning Banner -->
         <div id="warning-banner" class="mb-12 p-4 bg-red-900/30 border border-red-500/50 rounded-xl text-center text-red-200 text-sm italic">
             Loading essential safety information...
         </div>
@@ -77,9 +76,9 @@
         <div class="grid lg:grid-cols-2 gap-12 items-start">
             <div class="grid grid-cols-2 gap-4">
                 <div class="image-card h-[600px] rounded-2xl overflow-hidden border border-stone-800">
-                    <img id="slideshow" src="../budding-Bu6BSErSL_M-unsplash.jpg" alt="High quality cannabis" class="w-full h-full object-cover transition-opacity duration-1000">
+                    <img id="slideshow" src="../images/budding-Bu6BSErSL_M-unsplash.jpg" alt="High quality cannabis" class="w-full h-full object-cover transition-opacity duration-1000">
                     <script>
-                        const images = ['../budding-Bu6BSErSL_M-unsplash.jpg', '../budding-h3PWUqxpP_0-unsplash.jpg', '../roberto-valdivia-HrRm_V-V0sM-unsplash.jpg'];
+                        const images = ['../images/budding-Bu6BSErSL_M-unsplash.jpg', '../images/budding-h3PWUqxpP_0-unsplash.jpg', '../images/roberto-valdivia-HrRm_V-V0sM-unsplash.jpg'];
                         let currentIndex = 0;
                         setInterval(() => {
                             const imgElement = document.getElementById('slideshow');
@@ -94,10 +93,10 @@
                 </div>
                 <div class="space-y-4">
                     <div class="image-card h-[288px] rounded-2xl overflow-hidden border border-stone-800">
-                        <img src="../marijuana-buds-with-marijuana-joints-cannabis-oil.jpg" class="w-full h-full object-cover" alt="Detail 1">
+                        <img src="../images/marijuana-buds-with-marijuana-joints-cannabis-oil.jpg" class="w-full h-full object-cover" alt="Detail 1">
                     </div>
                     <div class="image-card h-[288px] rounded-2xl overflow-hidden border border-stone-800">
-                        <img src="../tim-foster-A-rAZGIE2pA-unsplash.jpg" class="w-full h-full object-cover" alt="Detail 2">
+                        <img src="../images/tim-foster-A-rAZGIE2pA-unsplash.jpg" class="w-full h-full object-cover" alt="Detail 2">
                     </div>
                 </div>
             </div>
@@ -194,7 +193,7 @@
 
             if (knowledge) {
                 const banner = document.getElementById('warning-banner');
-                banner.innerHTML = `<strong>SAFETY ALERT:</strong> ${knowledge.colosWarning || 'Always ensure product purity.'}`;
+                banner.innerHTML = `<strong class="text-white">SAFETY ALERT:</strong> ${knowledge.colosWarning || 'Always ensure product purity.'}`;
             }
 
             if (!strain) return;
